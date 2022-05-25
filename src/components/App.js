@@ -44,7 +44,7 @@ class App extends Component {
       const imagesCount = await decentragram.methods.imageCount().call()
       this.setState({ imagesCount })
       // Load images
-      for (var i = 1; i <= imagesCount; i++) {
+      for (var i = 30; i <= imagesCount; i++) {
         const image = await decentragram.methods.images(i).call()
         this.setState({
           images: [...this.state.images, image]
